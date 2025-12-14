@@ -292,10 +292,39 @@
 
             <!-- Project 3 -->
             <article class="project-card reveal-project">
-                <a href="#" class="project-link">
+                <a href="https://ambag.online" target="_blank" class="project-link">
                     <div class="project-image">
-                        <div class="project-image-inner" style="background: linear-gradient(135deg, #D35400 0%, #E67E22 50%, #F39C12 100%);">
-                            <div class="project-placeholder">
+                        <div class="project-image-inner">
+                            <!-- Multiple project screenshots carousel -->
+                            <div class="project-screenshots">
+                                <img src="images/ambag-screenshot-1.jpg" 
+                                     alt="AMBAG Website Screenshot 1" 
+                                     class="project-screenshot active">
+                                <img src="images/ambag-screenshot-2.jpg" 
+                                     alt="AMBAG Website Screenshot 2" 
+                                     class="project-screenshot">
+                                <img src="images/ambag-screenshot-3.jpg" 
+                                     alt="AMBAG Website Screenshot 3" 
+                                     class="project-screenshot">
+                            </div>
+                            <!-- Navigation arrows -->
+                            <button class="carousel-arrow carousel-arrow-prev" aria-label="Previous image">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M15 18l-6-6 6-6"/>
+                                </svg>
+                            </button>
+                            <button class="carousel-arrow carousel-arrow-next" aria-label="Next image">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 18l6-6-6-6"/>
+                                </svg>
+                            </button>
+                            <!-- Navigation dots -->
+                            <div class="project-carousel-dots">
+                                <button class="carousel-dot active" aria-label="Image 1" data-index="0"></button>
+                                <button class="carousel-dot" aria-label="Image 2" data-index="1"></button>
+                                <button class="carousel-dot" aria-label="Image 3" data-index="2"></button>
+                            </div>
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #D35400 0%, #E67E22 50%, #F39C12 100%);">
                                 <span class="project-icon">✈️</span>
                                 <span class="project-placeholder-text">AMBAG</span>
                             </div>
@@ -306,14 +335,15 @@
                     </div>
                     <div class="project-info">
                         <div class="project-meta">
-                            <span class="project-category">Mobile App</span>
+                            <span class="project-category">Web App</span>
                             <span class="project-year">2025</span>
                         </div>
                         <h3 class="project-title">AMBAG</h3>
-                        <p class="project-description">Smart budgeting companion for travelers. Plan trips, track expenses, and explore mindfully.</p>
+                        <p class="project-description">Cozy budget tracker for travelers. Create or join budget plans with friends and track expenses mindfully.</p>
                         <div class="project-tags">
-                            <span class="tag">React Native</span>
-                            <span class="tag">Firebase</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
                         </div>
                     </div>
                     <div class="project-arrow">
