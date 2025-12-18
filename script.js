@@ -629,6 +629,7 @@ function initializeMarqueeClone() {
 class DarkModeToggle {
     constructor() {
         this.toggle = document.getElementById('theme-toggle');
+        this.label = this.toggle ? this.toggle.querySelector('.theme-label') : null;
         this.currentTheme = localStorage.getItem('theme') || 'light';
         this.init();
     }
@@ -658,8 +659,12 @@ class DarkModeToggle {
         
         // Update toggle button state
         if (this.toggle) {
-            this.toggle.setAttribute('aria-label', 
-                theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+            const labelText = theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+            this.toggle.setAttribute('aria-label', labelText);
+            this.toggle.setAttribute('data-theme-state', theme);
+            if (this.label) {
+                this.label.textContent = labelText;
+            }
         }
     }
     

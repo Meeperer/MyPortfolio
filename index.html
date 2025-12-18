@@ -31,9 +31,17 @@
                 <a href="#about" class="nav-link magnetic-btn" data-text="About">About</a>
                 <a href="#contact" class="nav-link magnetic-btn" data-text="Contact">Contact</a>
             </div>
-            <button class="theme-toggle magnetic-btn" aria-label="Toggle dark mode" id="theme-toggle">
-                <span class="theme-icon theme-icon-light">
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <button class="theme-toggle magnetic-btn" aria-label="Switch to Dark Mode" id="theme-toggle">
+                <!-- Icons reflect the upcoming mode for clearer affordance -->
+                <span class="theme-icon theme-icon-light" aria-hidden="true">
+                    <!-- Moon icon (shown in light mode) -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </span>
+                <span class="theme-icon theme-icon-dark" aria-hidden="true">
+                    <!-- Sun icon (shown in dark mode) -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
                         <line x1="12" y1="1" x2="12" y2="3"></line>
                         <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -45,11 +53,7 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </span>
-                <span class="theme-icon theme-icon-dark">
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </span>
+                <span class="theme-label">Switch to Dark Mode</span>
             </button>
         </div>
     </nav>
@@ -137,6 +141,12 @@
                         <span class="quote-mark">"</span>
                     </blockquote>
                 </div>
+                <div class="about-actions reveal-fade delay-3">
+                    <a href="cv-lord-mandell-esguerra.pdf" class="btn-cv magnetic-btn" download>
+                        <span class="btn-cv-label">Download my CV</span>
+                        <span class="btn-cv-icon">↓</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -188,7 +198,7 @@
         </div>
         <div class="section-header">
             <span class="section-number">02</span>
-            <h2 class="section-title reveal-text">Selected Work</h2>
+            <h2 class="section-title reveal-text">My Projects</h2>
         </div>
         
         <div class="work-grid">
@@ -204,9 +214,6 @@
                                      class="project-screenshot active">
                                 <img src="images/batinosgarden-screenshot-2.jpg" 
                                      alt="Batino's Garden Website Screenshot 2" 
-                                     class="project-screenshot">
-                                <img src="images/batinosgarden-screenshot-3.jpg" 
-                                     alt="Batino's Garden Website Screenshot 3" 
                                      class="project-screenshot">
                             </div>
                             <!-- Navigation arrows -->
@@ -224,7 +231,6 @@
                             <div class="project-carousel-dots">
                                 <button class="carousel-dot active" aria-label="Image 1" data-index="0"></button>
                                 <button class="carousel-dot" aria-label="Image 2" data-index="1"></button>
-                                <button class="carousel-dot" aria-label="Image 3" data-index="2"></button>
                             </div>
                             <div class="project-placeholder" style="background: linear-gradient(135deg, #556B2F 0%, #6B8E23 50%, #8FBC8F 100%);">
                                 <span class="project-icon">🌿</span>
