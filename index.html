@@ -334,11 +334,72 @@
             <article class="project-card reveal-project">
                 <a href="#" class="project-link">
                     <div class="project-image">
-                        <div
-                            class="project-image-inner"
-                            style="background: linear-gradient(135deg, #1a1a1a 0%, #333 50%, #4a4a4a 100%);"
-                        >
-                            <div class="project-placeholder">
+                        <div class="project-image-inner">
+                            <!-- Project Screenshots Carousel -->
+                            <div class="project-screenshots">
+                                <img
+                                    src="images/vapers-hive-screenshot1.png"
+                                    alt="Vapers' Hive Website Screenshot 1"
+                                    class="project-screenshot active"
+                                >
+                                <img
+                                    src="images/vapers-hive-screenshot2.png"
+                                    alt="Vapers' Hive Website Screenshot 2"
+                                    class="project-screenshot"
+                                >
+                            </div>
+
+                            <!-- Carousel Navigation Arrows -->
+                            <button
+                                class="carousel-arrow carousel-arrow-prev"
+                                aria-label="Previous image"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M15 18l-6-6 6-6"/>
+                                </svg>
+                            </button>
+                            <button
+                                class="carousel-arrow carousel-arrow-next"
+                                aria-label="Next image"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M9 18l6-6-6-6"/>
+                                </svg>
+                            </button>
+
+                            <!-- Carousel Navigation Dots -->
+                            <div class="project-carousel-dots">
+                                <button
+                                    class="carousel-dot active"
+                                    aria-label="Image 1"
+                                    data-index="0"
+                                ></button>
+                                <button
+                                    class="carousel-dot"
+                                    aria-label="Image 2"
+                                    data-index="1"
+                                ></button>
+                            </div>
+
+                            <!-- Placeholder Fallback -->
+                            <div
+                                class="project-placeholder"
+                                style="background: linear-gradient(135deg, #1a1a1a 0%, #333 50%, #4a4a4a 100%);"
+                            >
                                 <span class="project-icon">💨</span>
                                 <span class="project-placeholder-text">Vapers' Hive</span>
                             </div>
