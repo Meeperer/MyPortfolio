@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lord Mandell Esguerra — Developer & Designer</title>
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Syne:wght@400;500;600;700;800&family=Karla:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Grain Overlay -->
     <div class="grain-overlay"></div>
-    
+
     <!-- Custom Cursor -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
@@ -31,17 +31,38 @@
                 <a href="#about" class="nav-link magnetic-btn" data-text="About">About</a>
                 <a href="#contact" class="nav-link magnetic-btn" data-text="Contact">Contact</a>
             </div>
-            <button class="theme-toggle magnetic-btn" aria-label="Switch to Dark Mode" id="theme-toggle">
-                <!-- Icons reflect the upcoming mode for clearer affordance -->
+            <button
+                class="theme-toggle magnetic-btn"
+                aria-label="Switch to Dark Mode"
+                id="theme-toggle"
+            >
+                <!-- Moon icon (shown in light mode) -->
                 <span class="theme-icon theme-icon-light" aria-hidden="true">
-                    <!-- Moon icon (shown in light mode) -->
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </span>
+                <!-- Sun icon (shown in dark mode) -->
                 <span class="theme-icon theme-icon-dark" aria-hidden="true">
-                    <!-- Sun icon (shown in dark mode) -->
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
                         <circle cx="12" cy="12" r="5"></circle>
                         <line x1="12" y1="1" x2="12" y2="3"></line>
                         <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -78,17 +99,27 @@
             <div class="hero-greeting reveal-fade">
                 <p class="greeting-text">Hi! I'm</p>
             </div>
+
             <div class="hero-text-wrapper">
                 <h1 class="hero-title reveal-text">
-                    <span class="line"><span class="word">Lord</span> <span class="word accent">Esguerra</span></span>
+                    <span class="line">
+                        <span class="word">Lord</span>
+                        <span class="word accent">Esguerra</span>
+                    </span>
                 </h1>
             </div>
+
             <div class="hero-subtitle reveal-fade delay-1">
                 <p class="subtitle-text">Welcome to my portfolio</p>
             </div>
+
             <div class="hero-tagline reveal-fade delay-2">
-                <p>Developer · Designer · Dreamer <span class="alias-subtle">@Meeperer</span></p>
+                <p>
+                    Developer · Designer · Dreamer
+                    <span class="alias-subtle">@Meeperer</span>
+                </p>
             </div>
+
             <div class="hero-intro reveal-fade delay-3">
                 <p>Designing with curiosity, developing with purpose.</p>
             </div>
@@ -207,32 +238,69 @@
                 <a href="https://batinosgarden.shop" target="_blank" class="project-link">
                     <div class="project-image">
                         <div class="project-image-inner">
-                            <!-- Multiple project screenshots carousel -->
+                            <!-- Project Screenshots Carousel -->
                             <div class="project-screenshots">
-                                <img src="images/batinosgarden-screenshot-1.jpg" 
-                                     alt="Batino's Garden Website Screenshot 1" 
-                                     class="project-screenshot active">
-                                <img src="images/batinosgarden-screenshot-2.jpg" 
-                                     alt="Batino's Garden Website Screenshot 2" 
-                                     class="project-screenshot">
+                                <img
+                                    src="images/batinosgarden-screenshot-1.jpg"
+                                    alt="Batino's Garden Website Screenshot 1"
+                                    class="project-screenshot active"
+                                >
+                                <img
+                                    src="images/batinosgarden-screenshot-2.jpg"
+                                    alt="Batino's Garden Website Screenshot 2"
+                                    class="project-screenshot"
+                                >
                             </div>
-                            <!-- Navigation arrows -->
-                            <button class="carousel-arrow carousel-arrow-prev" aria-label="Previous image">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            <!-- Carousel Navigation Arrows -->
+                            <button
+                                class="carousel-arrow carousel-arrow-prev"
+                                aria-label="Previous image"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
                                     <path d="M15 18l-6-6 6-6"/>
                                 </svg>
                             </button>
-                            <button class="carousel-arrow carousel-arrow-next" aria-label="Next image">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <button
+                                class="carousel-arrow carousel-arrow-next"
+                                aria-label="Next image"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
                                     <path d="M9 18l6-6-6-6"/>
                                 </svg>
                             </button>
-                            <!-- Navigation dots -->
+
+                            <!-- Carousel Navigation Dots -->
                             <div class="project-carousel-dots">
-                                <button class="carousel-dot active" aria-label="Image 1" data-index="0"></button>
-                                <button class="carousel-dot" aria-label="Image 2" data-index="1"></button>
+                                <button
+                                    class="carousel-dot active"
+                                    aria-label="Image 1"
+                                    data-index="0"
+                                ></button>
+                                <button
+                                    class="carousel-dot"
+                                    aria-label="Image 2"
+                                    data-index="1"
+                                ></button>
                             </div>
-                            <div class="project-placeholder" style="background: linear-gradient(135deg, #556B2F 0%, #6B8E23 50%, #8FBC8F 100%);">
+                            <div
+                                class="project-placeholder"
+                                style="background: linear-gradient(135deg, #556B2F 0%, #6B8E23 50%, #8FBC8F 100%);"
+                            >
                                 <span class="project-icon">🌿</span>
                                 <span class="project-placeholder-text">Batino's Garden</span>
                             </div>
@@ -266,7 +334,10 @@
             <article class="project-card reveal-project">
                 <a href="#" class="project-link">
                     <div class="project-image">
-                        <div class="project-image-inner" style="background: linear-gradient(135deg, #1a1a1a 0%, #333 50%, #4a4a4a 100%);">
+                        <div
+                            class="project-image-inner"
+                            style="background: linear-gradient(135deg, #1a1a1a 0%, #333 50%, #4a4a4a 100%);"
+                        >
                             <div class="project-placeholder">
                                 <span class="project-icon">💨</span>
                                 <span class="project-placeholder-text">Vapers' Hive</span>
@@ -301,36 +372,80 @@
                 <a href="https://ambag.online" target="_blank" class="project-link">
                     <div class="project-image">
                         <div class="project-image-inner">
-                            <!-- Multiple project screenshots carousel -->
+                            <!-- Project Screenshots Carousel -->
                             <div class="project-screenshots">
-                                <img src="images/ambag-screenshot-1.jpg" 
-                                     alt="AMBAG Website Screenshot 1" 
-                                     class="project-screenshot active">
-                                <img src="images/ambag-screenshot-2.jpg" 
-                                     alt="AMBAG Website Screenshot 2" 
-                                     class="project-screenshot">
-                                <img src="images/ambag-screenshot-3.jpg" 
-                                     alt="AMBAG Website Screenshot 3" 
-                                     class="project-screenshot">
+                                <img
+                                    src="images/ambag-screenshot-1.jpg"
+                                    alt="AMBAG Website Screenshot 1"
+                                    class="project-screenshot active"
+                                >
+                                <img
+                                    src="images/ambag-screenshot-2.jpg"
+                                    alt="AMBAG Website Screenshot 2"
+                                    class="project-screenshot"
+                                >
+                                <img
+                                    src="images/ambag-screenshot-3.jpg"
+                                    alt="AMBAG Website Screenshot 3"
+                                    class="project-screenshot"
+                                >
                             </div>
-                            <!-- Navigation arrows -->
-                            <button class="carousel-arrow carousel-arrow-prev" aria-label="Previous image">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                            <!-- Carousel Navigation Arrows -->
+                            <button
+                                class="carousel-arrow carousel-arrow-prev"
+                                aria-label="Previous image"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
                                     <path d="M15 18l-6-6 6-6"/>
                                 </svg>
                             </button>
-                            <button class="carousel-arrow carousel-arrow-next" aria-label="Next image">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <button
+                                class="carousel-arrow carousel-arrow-next"
+                                aria-label="Next image"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
                                     <path d="M9 18l6-6-6-6"/>
                                 </svg>
                             </button>
-                            <!-- Navigation dots -->
+
+                            <!-- Carousel Navigation Dots -->
                             <div class="project-carousel-dots">
-                                <button class="carousel-dot active" aria-label="Image 1" data-index="0"></button>
-                                <button class="carousel-dot" aria-label="Image 2" data-index="1"></button>
-                                <button class="carousel-dot" aria-label="Image 3" data-index="2"></button>
+                                <button
+                                    class="carousel-dot active"
+                                    aria-label="Image 1"
+                                    data-index="0"
+                                ></button>
+                                <button
+                                    class="carousel-dot"
+                                    aria-label="Image 2"
+                                    data-index="1"
+                                ></button>
+                                <button
+                                    class="carousel-dot"
+                                    aria-label="Image 3"
+                                    data-index="2"
+                                ></button>
                             </div>
-                            <div class="project-placeholder" style="background: linear-gradient(135deg, #D35400 0%, #E67E22 50%, #F39C12 100%);">
+
+                            <div
+                                class="project-placeholder"
+                                style="background: linear-gradient(135deg, #D35400 0%, #E67E22 50%, #F39C12 100%);"
+                            >
                                 <span class="project-icon">✈️</span>
                                 <span class="project-placeholder-text">AMBAG</span>
                             </div>
@@ -371,8 +486,14 @@
         </div>
         <div class="interlude-content">
             <p class="interlude-text reveal-text">
-                <span class="line"><span class="word">Less</span> <span class="word">noise,</span></span>
-                <span class="line"><span class="word">more</span> <span class="word accent">intention.</span></span>
+                <span class="line">
+                    <span class="word">Less</span>
+                    <span class="word">noise,</span>
+                </span>
+                <span class="line">
+                    <span class="word">more</span>
+                    <span class="word accent">intention.</span>
+                </span>
             </p>
         </div>
     </section>
@@ -398,7 +519,10 @@
             </div>
             
             <div class="contact-cta reveal-fade delay-1">
-                <a href="mailto:strike.sgera@gmail.com" class="contact-email magnetic-btn">
+                <a
+                    href="mailto:strike.sgera@gmail.com"
+                    class="contact-email magnetic-btn"
+                >
                     <span class="email-text">strike.sgera@gmail.com</span>
                     <span class="email-arrow">→</span>
                 </a>
@@ -406,7 +530,13 @@
 
             <div class="contact-social reveal-fade delay-2">
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/lordmandellesguerra" target="_blank" rel="noopener noreferrer" class="social-box magnetic-btn" data-platform="linkedin">
+                    <a
+                        href="https://www.linkedin.com/in/lordmandellesguerra"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-box magnetic-btn"
+                        data-platform="linkedin"
+                    >
                         <div class="social-box-content">
                             <div class="social-icon">
                                 <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -420,7 +550,13 @@
                             <span class="social-arrow">↗</span>
                         </div>
                     </a>
-                    <a href="https://github.com/Meeperer" target="_blank" rel="noopener noreferrer" class="social-box magnetic-btn" data-platform="github">
+                    <a
+                        href="https://github.com/Meeperer"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-box magnetic-btn"
+                        data-platform="github"
+                    >
                         <div class="social-box-content">
                             <div class="social-icon">
                                 <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -434,7 +570,13 @@
                             <span class="social-arrow">↗</span>
                         </div>
                     </a>
-                    <a href="https://www.facebook.com/strike.sgera" target="_blank" rel="noopener noreferrer" class="social-box magnetic-btn" data-platform="facebook">
+                    <a
+                        href="https://www.facebook.com/strike.sgera"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-box magnetic-btn"
+                        data-platform="facebook"
+                    >
                         <div class="social-box-content">
                             <div class="social-icon">
                                 <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -448,7 +590,13 @@
                             <span class="social-arrow">↗</span>
                         </div>
                     </a>
-                    <a href="https://www.instagram.com/lrdesg_" target="_blank" rel="noopener noreferrer" class="social-box magnetic-btn" data-platform="instagram">
+                    <a
+                        href="https://www.instagram.com/lrdesg_"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-box magnetic-btn"
+                        data-platform="instagram"
+                    >
                         <div class="social-box-content">
                             <div class="social-icon">
                                 <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -471,7 +619,10 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-left">
-                <span class="footer-name">Lord Mandell Esguerra <span class="alias-footer">(Meeperer)</span></span>
+                <span class="footer-name">
+                    Lord Mandell Esguerra
+                    <span class="alias-footer">(Meeperer)</span>
+                </span>
                 <span class="footer-title">Developer & Designer</span>
             </div>
             <div class="footer-right">
