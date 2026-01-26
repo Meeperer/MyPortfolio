@@ -357,6 +357,31 @@ class LoadingAnimation {
 }
 
 // ============================================================================
+// OPENING PAGE TRANSITION
+// ============================================================================
+
+class OpeningTransition {
+    constructor() {
+        this.transitionEl = document.querySelector('.page-transition');
+        this.init();
+    }
+
+    init() {
+        if (!this.transitionEl) return;
+
+        window.addEventListener('load', () => {
+            // Trigger the CSS-driven opening animation
+            this.transitionEl.classList.add('active');
+
+            // Hide element after animation completes
+            this.transitionEl.addEventListener('animationend', () => {
+                this.transitionEl.style.display = 'none';
+            }, { once: true });
+        });
+    }
+}
+
+// ============================================================================
 // SCROLL PROGRESS INDICATOR
 // ============================================================================
 
@@ -713,6 +738,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new ParallaxEffects();
     new ImageHoverEffects();
     new LoadingAnimation();
+    new OpeningTransition();
     new ScrollProgress();
     new SectionAnimations();
     new KeyboardNavigation();
