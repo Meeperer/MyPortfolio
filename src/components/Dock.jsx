@@ -7,7 +7,7 @@ import React, {
   useState
 } from 'react';
 import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from 'motion/react';
-import { VscHome, VscBook, VscAccount, VscCallIncoming } from 'react-icons/vsc';
+import { VscHome, VscBook, VscAccount, VscFolder, VscCallIncoming } from 'react-icons/vsc';
 
 import './Dock.css';
 
@@ -246,6 +246,7 @@ export function DefaultDock() {
     { icon: <VscHome size={iconSize} />, label: 'Home', onClick: () => scrollToId('hero') },
     { icon: <VscBook size={iconSize} />, label: 'Education', onClick: () => scrollToId('education') },
     { icon: <VscAccount size={iconSize} />, label: 'About', onClick: () => scrollToId('about') },
+    { icon: <VscFolder size={iconSize} />, label: 'My Projects', onClick: () => scrollToId('work') },
     { icon: <VscCallIncoming size={iconSize} />, label: 'Contact', onClick: () => scrollToId('contact') },
     { icon: 'theme-toggle', label: 'Theme', className: 'dock-item-theme' }
   ];
