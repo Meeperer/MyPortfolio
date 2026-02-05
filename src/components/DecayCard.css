@@ -1,0 +1,155 @@
+.decay-card.content {
+  position: relative;
+  overflow: visible;
+  border-radius: 8px;
+}
+
+/* L-shaped layer behind the card (offset shadow / frame) */
+.decay-card.content::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: calc(100% + 10px);
+  height: calc(70% + 10px);
+  border-bottom: 3px solid var(--color-burnt-orange, #b85a30);
+  border-right: 3px solid var(--color-burnt-orange, #b85a30);
+  border-top: none;
+  border-left: none;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.decay-card .svg {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  will-change: transform;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Hover image: fades in on hover instead of decay effect */
+.decay-card .decay-card-hover-image {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+.decay-card:hover .decay-card-hover-image {
+  opacity: 1;
+}
+
+.decay-card .decay-card-image-border {
+  stroke: var(--color-warm-gray-dark, #6b6154);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+[data-theme="dark"] .decay-card .decay-card-image-border {
+  stroke: var(--border-dark, #3d3832);
+}
+
+/* Bottom strip so text doesn’t overlap the image */
+.decay-card .card-text-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.25em 1em 1em;
+  background: linear-gradient(
+    to top,
+    rgba(15, 14, 12, 0.95) 0%,
+    rgba(15, 14, 12, 0.75) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+[data-theme="dark"] .decay-card .card-text-wrap {
+  background: linear-gradient(
+    to top,
+    rgba(28, 25, 21, 0.98) 0%,
+    rgba(28, 25, 21, 0.8) 50%,
+    transparent 100%
+  );
+}
+
+.decay-card .card-text {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.35em;
+  color: #F5F0E6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.decay-card .card-text::first-line {
+  font-size: 2.25rem;
+}
+
+/* Mobile responsive adjustments for DecayCard */
+@media (max-width: 768px) {
+  .decay-card.content {
+    width: 100% !important;
+    max-width: 320px;
+    height: auto !important;
+    aspect-ratio: 4/5;
+  }
+  
+  .decay-card.content::before {
+    bottom: -8px;
+    right: -8px;
+    width: calc(100% + 8px);
+    height: calc(70% + 8px);
+    border-width: 2px;
+  }
+  
+  .decay-card .card-text-wrap {
+    padding: 1em 0.75em 0.75em;
+  }
+  
+  .decay-card .card-text {
+    font-size: 1.25rem;
+  }
+  
+  .decay-card .card-text::first-line {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .decay-card.content {
+    max-width: 280px;
+  }
+  
+  .decay-card.content::before {
+    bottom: -6px;
+    right: -6px;
+    width: calc(100% + 6px);
+    height: calc(70% + 6px);
+  }
+  
+  .decay-card .card-text-wrap {
+    padding: 0.75em 0.5em 0.5em;
+  }
+  
+  .decay-card .card-text {
+    font-size: 1.1rem;
+  }
+  
+  .decay-card .card-text::first-line {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .decay-card.content {
+    max-width: 240px;
+  }
+}
