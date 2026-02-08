@@ -6,6 +6,7 @@ import React, {
   useRef,
   useState
 } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from 'motion/react';
 import { VscHome, VscBook, VscAccount, VscFolder, VscCallIncoming } from 'react-icons/vsc';
 
@@ -223,7 +224,9 @@ export default function Dock({
 
 export function DefaultDock() {
   const [isMobile, setIsMobile] = useState(false);
-  
+  const navigate = useNavigate();
+  const location = useLocation();
+
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -239,15 +242,39 @@ export function DefaultDock() {
     el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
+  const goToMyProjectsSection = () => {
+    if (location.pathname === '/projects') {
+      navigate('/');
+      setTimeout(() => {
+        const el = document.getElementById('work');
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 150);
+    } else {
+      scrollToId('work');
+    }
+  };
+
+  const goToHomeSection = (id) => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const el = id === 'hero' ? document.querySelector('.hero') : document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    } else {
+      scrollToId(id);
+    }
+  };
+
   // Smaller icon size on mobile
   const iconSize = isMobile ? 16 : 18;
 
   const items = [
-    { icon: <VscHome size={iconSize} />, label: 'Home', onClick: () => scrollToId('hero') },
-    { icon: <VscBook size={iconSize} />, label: 'Education', onClick: () => scrollToId('education') },
-    { icon: <VscAccount size={iconSize} />, label: 'About', onClick: () => scrollToId('about') },
-    { icon: <VscFolder size={iconSize} />, label: 'My Projects', onClick: () => scrollToId('work') },
-    { icon: <VscCallIncoming size={iconSize} />, label: 'Contact', onClick: () => scrollToId('contact') },
+    { icon: <VscHome size={iconSize} />, label: 'Home', onClick: () => goToHomeSection('hero') },
+    { icon: <VscBook size={iconSize} />, label: 'Education', onClick: () => goToHomeSection('education') },
+    { icon: <VscAccount size={iconSize} />, label: 'About', onClick: () => goToHomeSection('about') },
+    { icon: <VscFolder size={iconSize} />, label: 'My Projects', onClick: goToMyProjectsSection },
+    { icon: <VscCallIncoming size={iconSize} />, label: 'Contact', onClick: () => goToHomeSection('contact') },
     { icon: 'theme-toggle', label: 'Theme', className: 'dock-item-theme' }
   ];
 
